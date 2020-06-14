@@ -2,8 +2,7 @@ gunicorn
 flask
 flask-cors
 flask-restful
-flask_sqlalchemy
-os
+flask-sqlalchemy
 sqlalchemy
 pandas
 
