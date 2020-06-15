@@ -21,11 +21,11 @@ engine = create_engine("sqlite:///trip.db")
 #     return render_template("index.html")
 
 @app.route('/priorwkdata')
-def jundata():
-    df=pd.read_sql("SELECT * FROM priorwkdata",engine)
-    data=df.to_json()
-    return data 
-
+def priorwkdata():
+    length = request.args.get('length', None)
+    df=pd.read_sql_query(f"SELECT * FROM priorwkdata limit {length}",engine)
+    data=df.to_json(orient="records")
+    return  {'results': json.loads(data)}
 
 
 @app.route('/pridedata')
@@ -34,6 +34,12 @@ def pridedata():
     df=pd.read_sql_query(f"SELECT * FROM pridedata limit {length}",engine)
     data=df.to_json(orient="records")
     return  {'results': json.loads(data)}
+
+
+# DATABASE_URL will contain the database connection string:
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL', '')
+# Connects to the database using the app config
+db = SQLAlchemy(app)
 
 if __name__ =='__main__':
     app.run(debug=True,threaded=True)
