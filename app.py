@@ -12,13 +12,12 @@ import json
 
 app = Flask(__name__)
 CORS(app)
-
-engine = create_engine("sqlite:///trip.db")
-
 # DATABASE_URL will contain the database connection string:
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL', '')
 # Connects to the database using the app config
 db = SQLAlchemy(app)
+
+engine = create_engine("sqlite:///trip.db")
 
 # @app.route("/")
 # def index():
