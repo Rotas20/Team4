@@ -53,7 +53,17 @@ def zones():
     data=df.to_json(orient="records")
     return  {'results': json.loads(data)}
 
+@app.route('/pridedata_avg')
+def pridedata_avg():
+    df=pd.read_sql_query(f"SELECT dozone,AVG(tip_amount) FROM pridedata group by dozone",engine)
+    data=df.to_json(orient="records")
+    return  {'results': json.loads(data)}
 
+@app.route('/priorwkdata_avg')
+def priorwkdata_avg():
+    df=pd.read_sql_query(f"SELECT dozone,AVG(tip_amount) FROM pridedata group by dozone",engine)
+    data=df.to_json(orient="records")
+    return  {'results': json.loads(data)}
 
 
 if __name__ =='__main__':
