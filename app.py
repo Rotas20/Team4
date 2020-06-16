@@ -39,6 +39,14 @@ def pridedata():
     data=df.to_json(orient="records")
     return  {'results': json.loads(data)}
 
+@app.route('/pridedropoff/<zone>')
+def pridedropoff(zone):
+    length = request.args.get('length', None)
+    df=pd.read_sql_query(f"SELECT * FROM pridedata WHERE lower(dozone) = lower('{zone}') limit {length}",engine)
+    data=df.to_json(orient="records")
+    return  {'results': json.loads(data)}
+
+
 @app.route('/zones')
 def zones():
     df=pd.read_sql_query(f"SELECT DISTINCT dozone FROM pridedata",engine)
