@@ -19,10 +19,10 @@ db = SQLAlchemy(app)
 
 engine = create_engine("sqlite:///trip.db")
 
-# @app.route("/")
-# def index():
-#     """Return the homepage."""
-#     return render_template("index.html")
+@app.route("/")
+def index():
+    """Return the homepage."""
+    return render_template("/project_3index.html")
 
 @app.route('/priorwkdata')
 def priorwkdata():
@@ -38,6 +38,14 @@ def pridedata():
     df=pd.read_sql_query(f"SELECT * FROM pridedata limit {length}",engine)
     data=df.to_json(orient="records")
     return  {'results': json.loads(data)}
+
+@app.route('/zones')
+def zones():
+    df=pd.read_sql_query(f"SELECT DISTINCT dozone FROM pridedata",engine)
+    data=df.to_json(orient="records")
+    return  {'results': json.loads(data)}
+
+
 
 
 if __name__ =='__main__':
