@@ -14,8 +14,7 @@ var myMap = L.map("map", {
   var url = "http://pridetrip.herokuapp.com/map";
   
   d3.json(url, function(response) {
-  
-    console.log(response);
+   console.log(response)
     var location = response.results;
     var heatArray = [];
       for (var i = 0; i < location.length; i++) {
@@ -27,8 +26,8 @@ var myMap = L.map("map", {
     }
   
     var heat = L.heatLayer(heatArray, {
-      radius: 5000,
-      blur: 0
+      radius: 25,
+      blur: 15
     }).addTo(myMap);
   
   });
