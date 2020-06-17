@@ -1,4 +1,4 @@
-d3.json("http://pridetrip.herokuapp.com/pridedata_avg").then(payment=>{
+d3.json("https://pridetrip.herokuapp.com/pridedata_avg").then(payment=>{
     var test = payment.results
     console.log(test)
     var location = test.map(x => x.dozone);
@@ -69,7 +69,7 @@ d3.json("http://pridetrip.herokuapp.com/pridedata_avg").then(payment=>{
 
 
 
-  d3.json("http://pridetrip.herokuapp.com/priorwkdata_avg").then(payment=>{
+  d3.json("https://pridetrip.herokuapp.com/priorwkdata_avg").then(payment=>{
     var test = payment.results
     console.log(test)
     var location = test.map(x => x.dozone);
