@@ -80,7 +80,7 @@ function populateTable(dozone) {
 ​
 populateTable()
 populateDropDown()
-// callChart()
+
 ​
 ​
 ​
@@ -88,7 +88,7 @@ populateDropDown()
 function optionChanged(dropoffzone) {
   console.log(dropoffzone);
   populateTable(dropoffzone)
-  // callChart(dropoffzone)
+
 ​
 }
 Collapse
