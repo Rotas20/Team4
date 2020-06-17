@@ -20,8 +20,8 @@ var myMap = L.map("map", {
     var heatArray = [];
     var location = response.result;
     for (var i = 0; i < location.length; i++) {
-      var latitude = response[i].latitude;
-      var longitude = response[i].longitude;
+      var latitude = location[i].latitude;
+      var longitude = location[i].longitude;
       if (latitude,longitude) {
         heatArray.push([latitude, longitude]);
       }
