@@ -6,9 +6,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/superhero/bootstrap.min.css">
-        <script src=“https://cdn.jsdelivr.net/npm/jstat@1.9.3/dist/jstat.min.js”></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jstat/1.9.3/jstat.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/7.0.1/math.min.js"></script>
         <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
-        <title>Taxi Pride!!</title>
+        <title>Taxi Pride!</title>
         <link rel="stylesheet" href="/static/css/style.css">
         <link
         href="https://fonts.googleapis.com/css?family=Varela+Round"rel="stylesheet"/>
@@ -32,7 +33,7 @@
     <header class="masthead">
       <div class="container d-flex h-100 align-items-center">
         <div class="mx-auto text-center">
-          <h1 class="mx-auto my-0 text-uppercase">2019 TAXI PRIDE TRIPS</h1>
+          <h1 class="mx-auto my-0 text-uppercase">2019 TAXI CAB TRIPS</h1>
         </div>
       </div>
     </header>
@@ -49,10 +50,8 @@
           <div class="col-lg-12 md-auto">
             <h2 class="text-white mb-4">About This Project</h2>
             <p class="text-white-50">
-              A brief articulation of your chosen topic and rationale 
-              The most exciting thing of this month in NYC would be the pride parade. 
-              Inspired by a project on NYC open data, we want to find the post-pride parade hotspots, traffic ,impact on local business
-              by using yellow NYC taxi data of Sunday June 30th, 2019.           
+              Inspired by a project found on NYC Open Data, we sought to find the most popular destinations people traveled to after the pride parade.
+              The following charts use NYC Taxi data from June 30th, 2019.           
             </p>
           </div>
         </div>
@@ -82,7 +81,7 @@
     
           <div class="col-md-2">
             <div class="well">
-                <h5>Drop off zone:</h5>
+                <h5>Drop Off Zone:</h5>
                 <select id="selDataset" onchange="optionChanged(this.value)"></select>
             </div>
 
@@ -100,9 +99,11 @@
             <footer id="team" class="bg-black small text-center text-white-50">
               <div class="container">Copyright © Nisha, Sebastian, Star, Valentina, Ying</div>
             </footer>
-                          
-        <!-- <script src=“https://cdnjs.cloudflare.com/ajax/libs/mathjs/5.0.0/math.min.js”></script>  -->
-        <script src="/static/js/app.js"></script>
+
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
+
+        <script src="/static/js/app.js"></script>   
+        
         
     </body>
 
