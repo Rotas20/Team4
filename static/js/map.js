@@ -1,3 +1,4 @@
+console.log("map.js")
 var myMap = L.map("map", {
     center: [40.718266 ,-74.007819],//tribeca area
     zoom: 13
@@ -11,15 +12,13 @@ var myMap = L.map("map", {
     accessToken: API_KEY
   }).addTo(myMap);
   
-  var url = "http://pridetrip.herokuapp.com/map";
+  var url = "https://pridetrip.herokuapp.com/map";
   
-  d3.json(url, function(response) {
-  
-    console.log(response);
-  
-    var heatArray = [];
+  fetch(url).then(d=>d.json()).then(function(response) {
+   console.log(response)
     var location = response.results;
-    for (var i = 0; i < location.length; i++) {
+    var heatArray = [];
+      for (var i = 0; i < location.length; i++) {
       var latitude = location[i].dolat;
       var longitude = location[i].dolon;
       if (latitude,longitude) {
@@ -28,9 +27,9 @@ var myMap = L.map("map", {
     }
   
     var heat = L.heatLayer(heatArray, {
-      radius: 20,
-      blur: 35
+      radius: 25,
+      blur: 15
     }).addTo(myMap);
   
-  });
+  },(msg)=>{console.log(msg)} );
   
