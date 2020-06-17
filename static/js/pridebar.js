@@ -134,5 +134,3 @@ d3.json("http://pridetrip.herokuapp.com/pridedata_avg").then(payment=>{
     Plotly.newPlot("priorwk", bubbleData, bubbleLayout, {scrollZoom: true});
 
   })
-
-
