@@ -126,12 +126,12 @@ d3.json("http://pridetrip.herokuapp.com/pridedata_avg").then(payment=>{
         marker: {
           size: avgTip,
         //  color: otu_ids,
-          colorscale: "Earth"
+          colorscale: "Rainbow"
         }
       }
     ];
 
-    Plotly.newPlot("priorwk", bubbleData, bubbleLayout);
+    Plotly.newPlot("priorwk", bubbleData, bubbleLayout, {scrollZoom: true});
 
   })
 

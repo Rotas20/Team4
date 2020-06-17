@@ -16,10 +16,9 @@ var myMap = L.map("map", {
   d3.json(url, function(response) {
   
     console.log(response);
-  
-    var heatArray = [];
     var location = response.results;
-    for (var i = 0; i < location.length; i++) {
+    var heatArray = [];
+      for (var i = 0; i < location.length; i++) {
       var latitude = location[i].dolat;
       var longitude = location[i].dolon;
       if (latitude,longitude) {
@@ -28,8 +27,8 @@ var myMap = L.map("map", {
     }
   
     var heat = L.heatLayer(heatArray, {
-      radius: 20,
-      blur: 35
+      radius: 5000,
+      blur: 0
     }).addTo(myMap);
   
   });
