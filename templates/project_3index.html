@@ -1,0 +1,110 @@
+
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/superhero/bootstrap.min.css">
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/jstat@latest/dist/jstat.min.js">
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+        <title>Taxi Pride!!</title>
+        <link rel="stylesheet" href="/static/css/style.css">
+        <link
+        href="https://fonts.googleapis.com/css?family=Varela+Round"rel="stylesheet"/>
+      <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet"/>
+    </head>
+
+    <body>
+           <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav"> 
+            <div class="container">
+              <a class="navbar-brand js-scroll-trigger" href="project_3index.html"
+                >Introduction</a
+              > 
+            </nav>
+            <!-- <div class="hero text-center">
+                <h1>TAXI PRIDE 2019</h1>
+                <p>Fun facts about yellow cab trips post pride parade</p>
+            </div> -->
+
+            
+    <!-- Header -->
+    <header class="masthead">
+      <div class="container d-flex h-100 align-items-center">
+        <div class="mx-auto text-center">
+          <h1 class="mx-auto my-0 text-uppercase">2019 TAXI PRIDE TRIPS</h1>
+        </div>
+      </div>
+    </header>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <!-- About Section -->
+    <section id="about" class="about-section text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 md-auto">
+            <h2 class="text-white mb-4">About This Project</h2>
+            <p class="text-white-50">
+              A brief articulation of your chosen topic and rationale 
+              The most exciting thing of this month in NYC would be the pride parade. 
+              Inspired by a project on NYC open data, we want to find the post-pride parade hotspots, traffic ,impact on local business
+              by using yellow NYC taxi data of Sunday June 30th, 2019.           
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <br />
+    <br />
+    <br />
+
+
+       <!-- dashboard Section --> 
+        <div class="container">  
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>Drop off hotzones</h2>
+                    <div id="sankey"></div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>Payment Type vs Tips</h2>
+                    <div id="bar graph"></div>
+                </div>
+            </div>
+    
+          <div class="col-md-2">
+            <div class="well">
+                <h5>Drop off zone:</h5>
+                <select id="selDataset" onchange="optionChanged(this.value)"></select>
+            </div>
+
+              <div class="panel panel-primary">
+                <div class="panel-heading">
+                  <h3 class="panel-title">Trip Stats</h3>
+                </div>
+                <div id="trip-metadata" class="panel-body"></div>
+              </div>
+          </div>      
+            
+            <!-- Footer -->
+            <footer id="team" class="bg-black small text-center text-white-50">
+              <div class="container">Copyright © Nisha, Sebastian, Star, Valentina, Ying</div>
+            </footer>
+                  
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
+        <!-- <script src="static/js/update.js"></script> -->
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/jstat@latest/dist/jstat.min.js">
+        <script src="static/js/app.js"></script>
+    </body>
+
+    </html>
