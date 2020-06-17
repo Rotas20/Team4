@@ -12,7 +12,7 @@ var myMap = L.map("map", {
     accessToken: API_KEY
   }).addTo(myMap);
   
-  var url = "http://pridetrip.herokuapp.com/map";
+  var url = "https://pridetrip.herokuapp.com/map";
   
   fetch(url).then(d=>d.json()).then(function(response) {
    console.log(response)
