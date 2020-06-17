@@ -65,6 +65,12 @@ def priorwkdata_avg():
     data=df.to_json(orient="records")
     return  {'results': json.loads(data)}
 
+@app.route('/map')
+def map():
+    df=pd.read_sql_query(f"SELECT dozone ,dolat ,dolon FROM pridedata",engine)
+    data=df.to_json(orient="records")
+    return  {'results': json.loads(data)}
+
 
 if __name__ =='__main__':
     app.run(debug=True,threaded=True)
