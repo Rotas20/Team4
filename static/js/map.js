@@ -18,10 +18,10 @@ var myMap = L.map("map", {
     console.log(response);
   
     var heatArray = [];
-    var location = response.result;
+    var location = response.results;
     for (var i = 0; i < location.length; i++) {
-      var latitude = location[i].latitude;
-      var longitude = location[i].longitude;
+      var latitude = location[i].dolat;
+      var longitude = location[i].dolon;
       if (latitude,longitude) {
         heatArray.push([latitude, longitude]);
       }
